@@ -1,1 +1,2 @@
-Directory for HTML school work from Holberton School
+Directory for web front end project for Holberton School AirBnB clone
+

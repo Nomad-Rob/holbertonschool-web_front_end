@@ -1,0 +1,4 @@
+/* A Sass file that prints a message in debug output */
+$output: "Hello World!";
+
+@debug $output;

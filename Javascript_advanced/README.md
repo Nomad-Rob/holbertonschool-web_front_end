@@ -20,12 +20,7 @@ Your code should use the js extension
 
 ## Acknowledgements :clap:
 
-the work in this project was completed as part of the curriculum for
+work in this project was completed as part of the curriculum for
 Holberton School. For more information, visit
 [this link](https://www.holbertonschool.com/).
 
-<p align="center">
-  <img src="http://www.holbertonschool.com/holberton-logo.png"
-       alt="Holberton School logo"
-  >
-</p>

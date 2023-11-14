@@ -27,7 +27,10 @@ function countPrimeNumbers() {
   return count;
 }
 
-let t0 = performance.now();
-console.log('Number of prime numbers:', countPrimeNumbers());
-let t1 = performance.now();
-console.log(`Execution time of printing countPrimeNumbers was ${t1 - t0} milliseconds.`);
+let t0 = process.hrtime();
+let primeCount = countPrimeNumbers();
+let [seconds, nanoseconds] = process.hrtime(t0);
+let milliseconds = (seconds * 1000) + (nanoseconds / 1e6);
+
+console.log('Number of prime numbers:', primeCount);
+console.log(`Execution time of printing countPrimeNumbers was ${milliseconds} milliseconds.`);

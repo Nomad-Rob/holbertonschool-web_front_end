@@ -19,19 +19,27 @@ Use vanilla javascript to run the Ajax query (no jQuery or other framework)
 You must not call createElement within queryWikipedia directly
 */
 
-function createElement (data) {
-  const para = document.createElement('p');
-  para.textContent = data;
-  document.body.append(para);
+const createElement = (data) => {
+  const p = document.createElement('p');
+  p.innerHTML = data;
+  document.body.appendChild(p);
 }
 
-function queryWikipedia(callback) {
-  const request = new XMLHttpRequest();
-  request.open('GET', 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow&origin=*');
-  request.onload = function() {
-    callback(request.responseText);
+const queryWikipedia = (callback) => {
+
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow&origin=*');
+
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      const response = JSON.parse(xhr.response);
+      const extract = response.query.pages[21721040].extract;
+      callback(extract);
+    }
   };
-  request.send();
+
+  xhr.send();
 }
 
 queryWikipedia(createElement);
+

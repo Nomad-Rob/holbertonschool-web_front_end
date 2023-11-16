@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#Create the following files
+touch 0-welcome.js
+touch 1-nested_functions.js
+touch 2-function_me.js
+touch 3-classrooms.js
+touch 4-math.js
+touch 5-mode.js
+touch 6-hogwarts.js
+touch 7-timeout.js
+touch 8-payments.js
+touch 9-prime.js
+touch 10-prime.js
+touch 11-prime.js
+touch 12-room_area.js
+touch 13-bind_user.js
+touch 14-wikipedia.js

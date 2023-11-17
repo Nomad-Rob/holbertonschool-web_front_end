@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Create the following files
+touch 0-index.html
+touch 1-index.html
+touch 2-index.html
+touch 3-index.html
+touch 4-index.html
+touch 5-index.html
+touch 6-index.html
+touch 7-index.html
+touch 8-index.html
+touch 9-index.html
+touch 10-index.html
+touch 11-index.html
+touch 12-index.html
+touch db.json

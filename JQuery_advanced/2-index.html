@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 0</title>
+    <!-- Load the latest slim & minified version of jQuery from the CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<script type="application/javascript">
+    function createFamilyTree() {
+        // Building the entire table as a string
+        var tableHTML = '<table>' +
+            '<thead><tr><th>Firstname</th><th>Lastname</th></tr></thead>' +
+            '<tbody>' +
+            '<tr><td>Guillaume</td><td>Salva</td></tr>' +
+            '<tr><td>Paulette</td><td>Salva</td></tr>' +
+            '<tr><td>Antoine</td><td>Salva</td></tr>' +
+            '</tbody>' +
+            '</table>';
+
+        // Appending the table to the body of the page
+        $('body').append(tableHTML);
+    }
+
+    // Call the createFamilyTree function when the document is ready
+    $(document).ready(function() {
+        createFamilyTree();
+    });
+</script>
+
+</body>
+</html>

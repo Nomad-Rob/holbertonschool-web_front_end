@@ -2,63 +2,68 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "The Art of Debugging",
+      "author": "Bug Hunter"
     },
     {
-      "title": "fd",
-      "author": "fffff",
-      "id": 2
+      "id": 2,
+      "title": "Why Cats Love Keyboards",
+      "author": "Fluffy Paws"
     },
     {
-      "title": "fd",
-      "author": "fffff",
-      "id": 3
+      "id": 3,
+      "title": "Coffee: The True Source Code",
+      "author": "Java Beans"
     },
     {
-      "title": "f",
-      "author": "f",
-      "id": 4
+      "id": 4,
+      "title": "I Lost My Rubber Duck",
+      "author": "Quack Debugger"
     },
     {
-      "title": "",
-      "author": "",
-      "id": 5
+      "id": 5,
+      "title": "Confessions of a Console Logger",
+      "author": "Println Developer"
     },
     {
-      "title": "",
-      "author": "",
-      "id": 6
+      "id": 6,
+      "title": "My Life in The Cloud",
+      "author": "Cirrus Stratus"
     },
     {
-      "title": "",
-      "author": "",
-      "id": 7
+      "id": 7,
+      "title": "404: Title Not Found",
+      "author": "Anonymous"
     },
     {
-      "title": "",
-      "author": "",
-      "id": 8
+      "id": 8,
+      "title": "Indentation Matters",
+      "author": "Tab Space"
     },
     {
-      "title": "",
-      "author": "",
-      "id": 9
+      "id": 9,
+      "title": "Recursion: See Recursion",
+      "author": "Loop Infinite"
     },
     {
-      "title": "",
-      "author": "",
-      "id": 10
+      "id": 10,
+      "title": "Git Commit to Be Fit",
+      "author": "Branch Master"
     }
   ],
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
+      "body": "This post was so enlightening, my code started self-debugging!",
       "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "I thought I knew about indentation, but this article was next level.",
+      "postId": 4
     }
   ],
   "profile": {
-    "name": "typicode"
+    "name": "Rob Farley"
   }
 }

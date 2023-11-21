@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form with js-cookie</title>
+    <!-- Import js-cookie from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input, button {
+            margin: 10px 0;
+            display: block;
+        }
+
+        #logoutLink {
+            font-weight: normal;
+            font-style: italic;
+            margin-left: 10px;
+            display: inline;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loginForm">
+        <h2>Login</h2>
+        <input id="firstname" type="text" placeholder="First Name">
+        <input id="email" type="text" placeholder="Email">
+        <button onclick="setCookiesAndShowWelcomeMessage()">Log me in</button>
+    </div>
+
+    <script>
+        function setCookiesAndShowWelcomeMessage() {
+            var firstname = document.getElementById('firstname').value;
+            var email = document.getElementById('email').value;
+            
+            Cookies.set('firstname', firstname, { expires: 10 });
+            Cookies.set('email', email, { expires: 10 });
+
+            showWelcomeMessageOrForm();
+        }
+
+        function showForm() {
+            var welcomeMessage = document.getElementById('welcomeMessage');
+            if (welcomeMessage) welcomeMessage.remove();
+
+            var form = document.getElementById('loginForm');
+            form.classList.remove('hidden');
+        }
+
+        function hideForm() {
+            var form = document.getElementById('loginForm');
+            form.classList.add('hidden');
+        }
+
+        function deleteCookiesAndShowForm() {
+            Cookies.remove('firstname');
+            Cookies.remove('email');
+            showForm();
+        }
+
+        function showWelcomeMessageOrForm() {
+            var firstname = Cookies.get('firstname');
+            if (firstname) {
+                hideForm();
+                var welcomeMessage = document.createElement('h1');
+                welcomeMessage.id = 'welcomeMessage';
+                welcomeMessage.innerHTML = 'Welcome ' + firstname + 
+                    '<a href="#" id="logoutLink" onclick="deleteCookiesAndShowForm()">(logout)</a>';
+                document.body.appendChild(welcomeMessage);
+            } else {
+                showForm();
+            }
+        }
+
+        window.onload = function() {
+            showWelcomeMessageOrForm();
+        };
+    </script>
+
+</body>
+</html>

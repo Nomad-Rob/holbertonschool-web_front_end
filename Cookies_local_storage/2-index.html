@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie Reader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input, button {
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <input id="firstname" type="text" placeholder="First Name">
+    <input id="email" type="text" placeholder="Email">
+    <button onclick="setCookies()">Log me in</button>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <script>
+        function setCookies() {
+            var firstname = document.getElementById('firstname').value;
+            var email = document.getElementById('email').value;
+            
+            var expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 10);
+            var expires = "expires=" + expiryDate.toUTCString();
+
+            document.cookie = "firstname=" + firstname + ";" + expires + ";path=/";
+            document.cookie = "email=" + email + ";" + expires + ";path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return "";
+        }
+
+        function showCookies() {
+            var email = getCookie("email");
+            var firstname = getCookie("firstname");
+            var p = document.createElement('p');
+            p.innerHTML = "Email: " + email + " - Firstname: " + firstname;
+            document.body.appendChild(p);
+        }
+    </script>
+
+</body>
+</html>

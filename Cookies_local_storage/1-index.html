@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie Manager with Expiry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input, button {
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <input id="firstname" type="text" placeholder="First Name">
+    <input id="email" type="text" placeholder="Email">
+    <button onclick="setCookies()">Log me in</button>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <script>
+        function setCookies() {
+            var firstname = document.getElementById('firstname').value;
+            var email = document.getElementById('email').value;
+            
+            var expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 10); // Set the date 10 days ahead
+            var expires = "expires=" + expiryDate.toUTCString();
+
+            document.cookie = "firstname=" + firstname + ";" + expires + ";path=/";
+            document.cookie = "email=" + email + ";" + expires + ";path=/";
+        }
+
+        function showCookies() {
+            var p = document.createElement('p');
+            p.innerHTML = "Cookies: " + document.cookie;
+            document.body.appendChild(p);
+        }
+    </script>
+
+</body>
+</html>

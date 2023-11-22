@@ -1,30 +1,52 @@
-General
-Usage of Containers
-Usage of the Grid system
-Usage of Components
-Usage of Utilities
-Requirements
-General
-A README.md file, at the root of the folder of the project, is mandatory
-Use Bootstrap version 4.4.1
-Use the CDN version
-Add this <link> in the <head> part of your HTML
+# Bootstrap Project
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+## Overview
+This project, guided by Guillaume Salva, CTO at Holberton School, focuses on utilizing Bootstrap 4.4 for responsive, mobile-first front-end web development. The emphasis is on the CSS styling component of Bootstrap, covering containers, grid systems, components, and utilities.
 
+## Learning Objectives
+- Mastery of Bootstrap Containers.
+- Proficiency in using Bootstrap's Grid system.
+- Effective use of Bootstrap Components.
+- Application of Bootstrap Utilities.
 
-Bootstrap is not specifically a part of CSS; rather, it is a popular front-end framework that uses HTML, CSS, and JavaScript to help developers create responsive and visually appealing web applications and websites more easily. Here's a brief overview of Bootstrap:
+## Requirements
+- Mandatory README.md file at the project root.
+- Use Bootstrap version 4.4.1.
+- Implement the CDN version of Bootstrap.
+- Include the following link in the HTML head:
+  `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">`
 
-CSS Framework: Bootstrap provides a pre-designed and pre-coded set of CSS classes and components that can be used to style web pages. These styles cover things like typography, buttons, forms, navigation bars, and more.
+## Tasks
 
-Responsive Design: One of Bootstrap's main strengths is its focus on responsive design. It includes a responsive grid system that makes it easy to create layouts that adapt to different screen sizes, from large desktop monitors to small mobile devices.
+### Task 0: Reboot Styling
+- Incorporate Bootstrap to reset CSS styling.
 
-JavaScript Components: Bootstrap includes JavaScript components like modals, tooltips, carousels, and accordions that can be easily integrated into your web pages with minimal coding.
+### Task 1: Blocks
+- Create a responsive layout with various Bootstrap classes.
 
-Customization: While Bootstrap provides a default set of styles and components, it's highly customizable. Developers can use its extensive documentation to tailor the framework to their specific project needs. This can include changing colors, fonts, and even removing unused components to reduce file size.
+### Task 2: Table of Chemical Elements
+- Build a responsive table with header, navigation, and alert components using Bootstrap.
 
-Cross-Browser Compatibility: Bootstrap is designed to work consistently across various web browsers, reducing the need for extensive browser-specific CSS or JavaScript coding.
+### Task 3: Cards
+- Implement a card layout with modal functionality.
 
-Community and Resources: Bootstrap has a large and active community, which means you can find a wealth of resources, tutorials, and third-party themes and extensions to enhance your projects.
+### Task 4: Bob Dylan
+- Construct a responsive webpage with tabs for different content.
 
-To use Bootstrap, you typically include its CSS and JavaScript files in your HTML document, and then you can start using its classes and components to build your web pages more efficiently. It simplifies many common web development tasks, making it a popular choice among developers for creating responsive and visually appealing websites.
+### Task 5: Show/Hide - Screen Size
+- Design a responsive layout that shows or hides elements based on screen size.
+
+### Task 6: Overwrite CSS
+- Customize Bootstrap's default styles using a separate CSS file.
+
+## Additional Instructions
+- All styling must be achieved using Bootstrap classes; no inline or internal CSS styling is allowed.
+- HTML structure modification is not permitted; only class additions.
+- The repository should include specific HTML files for each task.
+
+## Repository
+GitHub repository: holbertonschool-web_front_end
+Directory: Bootstrap
+Files: `0-index.html`, `1-index.html`, `2-index.html`, `3-index.html`, `4-index.html`, `5-index.html`, `6-styles.css`
+
+---
